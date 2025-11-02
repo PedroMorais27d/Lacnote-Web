@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>LacNote</title>
+  <link rel="stylesheet" href="conlac.css">
+</head>
+
+<body>
+  <!-- CONSULTAS -->
+  <div id="producao-consultas" class="container ativo">
+    <div class="topo">
+      <div class="logo-container">
+        <img src="../../assets/images/logolac.png" alt="Logo LacNote" class="logo">
+      </div>
+    </div>
+
+    <h2 class="subtitulo">Produção de Leite - Consultas</h2>
+
+    <select id="animal" name="animal">
+      <option value="mococa">Mococa</option>
+      <option value="mimosa">Mimosa</option>
+      <option value="estrela">Estrela</option>
+    </select>
+
+    <div>
+      <button class="btn" onclick="mostrarTela('producao-diaria')">Diário</button>
+      <button class="btn" onclick="mostrarTela('producao-semanal')">Semanal</button>
+      <button class="btn" onclick="mostrarTela('producao-mensal')">Mensal</button>
+      <button class="btn" onclick="mostrarTela('producao-anual')">Anual</button>   
+        
+    </div>
+    <center> 
+      <button class="btn"><a href="../main/index.html">Voltar</a></button>
+    </center> 
+  </div>
+
+  <!-- DIÁRIA -->
+  <div id="producao-diaria" class="container">
+    <h2 class="subtitulo">Produção de Leite - Por Turno</h2>
+    <label>Manhã:</label>
+    <input type="text" placeholder="2 Litros"><br>
+    <label>Tarde:</label>
+    <input type="text" placeholder="2 Litros"><br>
+    <label>Noite:</label>
+    <input type="text" placeholder="2 Litros"><br><br>
+    <button class="btn" onclick="mostrarTela('producao-consultas')">Voltar</button>
+  </div>
+
+  <!-- SEMANAL -->
+  <div id="producao-semanal" class="container">
+    <h2 class="subtitulo">Produção de Leite - Semanal</h2>
+    <label>Semana 1:</label>
+    <input type="text" placeholder="Total (L)"><br>
+    <label>Semana 2:</label>
+    <input type="text" placeholder="Total (L)"><br><br>
+    <button class="btn" onclick="mostrarTela('producao-consultas')">Voltar</button>
+  </div>
+
+  <!-- MENSAL -->
+  <div id="producao-mensal" class="container">
+    <h2 class="subtitulo">Produção de Leite - Mensal</h2>
+    <label>Mês:</label>
+    <input type="text" placeholder="Total (L)"><br><br>
+    <button class="btn" onclick="mostrarTela('producao-consultas')">Voltar</button>
+  </div>
+
+  <!-- ANUAL -->
+  <div id="producao-anual" class="container">
+    <h2 class="subtitulo">Produção de Leite - Anual</h2>
+    <label>Ano:</label>
+    <input type="text" placeholder="Total (L)"><br><br>
+    <button class="btn" onclick="mostrarTela('producao-consultas')">Voltar</button>
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+    function mostrarTela(id) {
+      // Oculta todas as divs com classe container
+      document.querySelectorAll('.container').forEach(div => {
+        div.classList.remove('ativo');
+      });
+      // Mostra apenas a div clicada
+      document.getElementById(id).classList.add('ativo');
+    }
+    
+  </script>
+</body>
+</html>

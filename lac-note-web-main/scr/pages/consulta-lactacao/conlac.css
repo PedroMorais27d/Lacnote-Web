@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f1d392;
+  font-family: Arial, sans-serif;
+}
+
+/* Cada container começa escondido */
+.container {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Somente o ativo aparece */
+.container.ativo {
+  display: flex;
+}
+
+.logo-container {
+  text-align: center;
+  flex: 1;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+}
+
+.titulo {
+  font-size: 1em;
+  color: #556b2f;
+  font-weight: bold;
+  margin: 0;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  max-width: 250px;
+  padding: 10px;
+  margin: 8px 0 20px 0;
+  border: none;
+  border-radius: 6px;
+  background-color: #b4b97b;
+  text-align: center;
+  font-size: 1em;
+  color: #333;
+}
+
+input::placeholder {
+  color: #333;
+  font-weight: bold;
+}
+
+.btn {
+  width: 200px;
+  padding: 10px;
+  margin: 6px 0;
+  background-color: #556b2f;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+a {
+color: white;
+text-decoration: None;
+}
+
+.btn:hover {
+  background-color: #6a8235;
+}
+
