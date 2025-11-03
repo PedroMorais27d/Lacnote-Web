@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ece2cb;
+    font-family: Arial, sans-serif;
+}
+select {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 6px;
+  background-color: #b4b97b;
+  text-align: center;
+  font-size: 1em;
+  color: #333;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Somente o ativo aparece */
+.container.ativo {
+  display: flex;
+}
+
+.logo-container {
+  text-align: center;
+  flex: 1;
+}
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.voltar {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #333;
+}
+
+.logo-container {
+    text-align: center;
+    flex: 1;
+}
+
+.logo {
+    width: 400px;
+    height: auto;
+}
+
+#resultado-consulta {
+      display: none;
+    }
+
+    #resultado-consulta.ativo {
+      display: flex;
+    }
+#resultado-consulta input[type="text"],
+#resultado-consulta input[type="date"],
+#resultado-consulta input[type="search"] {
+  width: 100%;
+  max-width: 360px;   /* limite de largura */
+  box-sizing: border-box;
+}
+    /* 🔹 Mantém o topo fixo */
+    .topo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #ece2cb; /* mesma cor do fundo para mesclar */
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      z-index: 10;
+    }
+
+    /* 🔹 Espaço abaixo do topo para centralizar o restante */
+    .conteudo {
+      margin-top: 150px; /* altura da logo + espaçamento */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+}
+
+input[type="text"], 
+input[type="date"],
+input[type="search"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 6px;
+    background-color: #b4b97b;
+    text-align: center;
+    font-size: 1em;
+    color: #333;
+}
+
+input::placeholder {
+    color: #333;
+    font-weight: bold;
+}
+
+.btn {
+  width: 200px;
+  padding: 10px;
+  margin: 6px 0;
+  background-color: #556b2f;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #6a8235;
+}
+
+.botoes {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;   
+  gap: 10px;              
+}
+a {
+color: white;
+text-decoration: None;
+}
